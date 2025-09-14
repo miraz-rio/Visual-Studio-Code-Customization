@@ -95,4 +95,43 @@
   },
 
   // ===== Terminal =====
-  "terminal.integrated.font
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.fontFamily": "Fira Code, Operator Mono",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+  // ===== Diff Editor =====
+  "diffEditor.wordWrap": "on",
+
+  // ===== Security =====
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // ===== Live Server =====
+  "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+
+  // ===== Live SASS Compiler =====
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/css"
+    }
+  ],
+  "liveSassCompile.settings.generateMap": false,
+
+  // ===== Screencast Mode =====
+  "screencastMode.onlyKeyboardShortcuts": true,
+  "screencastMode.mouseIndicatorColor": "#f1c40f",
+  "screencastMode.verticalOffset": 0,
+
+  // ===== Emmet Support =====
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+
+  // ===== Miscellaneous =====
+  "debug.console.fontSize": 12,
+  "scm.inputFontSize": 12
+}
