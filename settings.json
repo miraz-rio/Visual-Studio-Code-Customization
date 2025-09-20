@@ -6,7 +6,6 @@
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "editor.minimap.enabled": false,
-  "editor.minimap.sectionHeaderFontSize": 7,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -17,20 +16,17 @@
       }
     ]
   },
-  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSmoothCaretAnimation": false,
   "editor.cursorBlinking": "expand",
   "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
   "editor.formatOnType": false,
   "editor.linkedEditing": true,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true,
-  "editor.guides.bracketPairsHorizontal": true,
+  "editor.guides.bracketPairs": "active",
   "editor.hover.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.fixAll.tslint": true,
     "source.organizeImports": "explicit"
   },
   "eslint.alwaysShowStatus": true,
@@ -41,19 +37,17 @@
   "prettier.arrowParens": "avoid",
   "prettier.htmlWhitespaceSensitivity": "ignore",
   "prettier.bracketSameLine": true,
+  "prettier.tailwindConfig": "./tailwind.config.js",
 
   // ===== Language Specific =====
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
   "[javascript]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": null
+    "editor.formatOnSave": true
   },
   "[javascriptreact]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": null
+    "editor.formatOnSave": true
   },
 
   // ===== UI Customization =====
@@ -65,33 +59,9 @@
     "editorGroupHeader.tabsBackground": "#2c2c54",
     "activityBar.background": "#2c2c54",
     "sideBar.background": "#141422",
-    "minimap.background": "#141422",
     "tab.activeBackground": "#706fd3",
     "tab.inactiveBackground": "#191846",
-    "terminal.border": "#2c2c54",
-    "terminal.background": "#2c2c54",
-    "statusBar.background": "#474787",
-    "scrollbarSlider.background": "#474787",
-    "scrollbarSlider.hoverBackground": "#706fd3",
-    "terminal.foreground": "#A89984",
-    "terminalCursor.background": "#A89984",
-    "terminalCursor.foreground": "#A89984",
-    "terminal.ansiBlack": "#1D2021",
-    "terminal.ansiBlue": "#0D6678",
-    "terminal.ansiBrightBlack": "#665C54",
-    "terminal.ansiBrightBlue": "#0D6678",
-    "terminal.ansiBrightCyan": "#8BA59B",
-    "terminal.ansiBrightGreen": "#95C085",
-    "terminal.ansiBrightMagenta": "#8F4673",
-    "terminal.ansiBrightRed": "#FB543F",
-    "terminal.ansiBrightWhite": "#FDF4C1",
-    "terminal.ansiBrightYellow": "#FAC03B",
-    "terminal.ansiCyan": "#8BA59B",
-    "terminal.ansiGreen": "#95C085",
-    "terminal.ansiMagenta": "#8F4673",
-    "terminal.ansiRed": "#FB543F",
-    "terminal.ansiWhite": "#A89984",
-    "terminal.ansiYellow": "#FAC03B"
+    "statusBar.background": "#474787"
   },
 
   // ===== Terminal =====
@@ -99,6 +69,14 @@
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.fontFamily": "Fira Code, Operator Mono",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+    },
+    "PowerShell": {
+      "source": "PowerShell"
+    }
+  },
 
   // ===== Diff Editor =====
   "diffEditor.wordWrap": "on",
@@ -107,7 +85,7 @@
   "security.workspace.trust.untrustedFiles": "open",
 
   // ===== Live Server =====
-  "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+  "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
 
@@ -117,21 +95,29 @@
       "format": "compressed",
       "extensionName": ".min.css",
       "savePath": "/css"
+    },
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css"
     }
   ],
   "liveSassCompile.settings.generateMap": false,
 
-  // ===== Screencast Mode =====
-  "screencastMode.onlyKeyboardShortcuts": true,
-  "screencastMode.mouseIndicatorColor": "#f1c40f",
-  "screencastMode.verticalOffset": 0,
-
   // ===== Emmet Support =====
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
   },
 
   // ===== Miscellaneous =====
   "debug.console.fontSize": 12,
-  "scm.inputFontSize": 12
+  "scm.inputFontSize": 12,
+
+  // ===== Headwind (Tailwind Sorter) =====
+  "headwind.runOnSave": true,
+  "headwind.removeDuplicates": true,
+  "headwind.sortTailwindClasses": true,
+  "headwind.classRegex": "(?:class(?:Name)?\\s*=\\s*)(?:\"|')(.*?)(?:\"|')",
+  "headwind.runOnSaveFor": ["html", "javascript", "javascriptreact", "typescript", "typescriptreact"]
 }
